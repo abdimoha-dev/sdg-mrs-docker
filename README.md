@@ -15,7 +15,7 @@ conf directory contains dhis2 database configuration details
     DB_NAME=database name  
     PASSWORD= your password
 5. Add your compressed sql file here with the name "dhis2-db.sql.gz"
-6. RUN: docker build -t ethiopia-sdg:1.0 .
+6. RUN: docker build -t benin-sdg:1.0 .
 7. cd ../
 8. RUN: docker-compose -f docker-compose.prod.yml up
 9. Go to your browser: http://0.0.0.0:8085/ to access dhis2
