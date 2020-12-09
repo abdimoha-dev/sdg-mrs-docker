@@ -16,7 +16,8 @@ conf directory contains dhis2 database configuration details
         DB_USER= your username  
         DB_NAME=database name  
         PASSWORD= your password  
-8. RUN: docker-compose up
+8. RUN: docker-compose -f docker-compose.prod.yml up
+9. Go to your browser: http://0.0.0.0:8085/ to access dhis2
 
 
 # Developer instruction for production deployment
