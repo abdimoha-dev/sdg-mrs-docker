@@ -10,22 +10,27 @@ conf directory contains dhis2 database configuration details
 1. Install docker in your local machine.
 2. clone this repo
 3. cd database
-4. Create two .env files with same credentials and put one in the root directory and the other in the databse directory  
-    DB_USER= your username  
-    DB_NAME=database name  
-    PASSWORD= your password
-5. Add your compressed sql file here with the name "dhis2-db.sql.gz"
-6. RUN: docker build -t ethiopia-sdg:1.0 .
-7. cd ../
+4. Add your compressed sql file here with the name "dhis2-db.sql.gz"
+5. RUN: docker build -t ethiopia-sdg:1.0 .
+5. cd ../
+7. Create .env file with the credentials below in the root directory  
+    DB_USER= dhis  
+    DB_NAME=dhis  
+    PASSWORD= dhis
 8. RUN: docker-compose -f docker-compose.prod.yml up
 9. Go to your browser: http://0.0.0.0:8085/ to access dhis2
+
 
 # Developer instruction for production deployment
 
 1. Install docker in your local machine.
 2. clone this repo
-3. Create .env file in the root directory then add the following content  
-    DB_USER= your username  
-    DB_NAME=database name  
-    PASSWORD= your password
+3. Create .env file in the root directory then add the following credentials  
+    DB_USER=dhis  
+    DB_NAME=dhis  
+    PASSWORD=dhis
 4. RUN: docker-compose -f docker-compose.prod.yml up -d
+5. Go to your browse: http://yourIPaddress:8085/ to access dhis2
+
+# NB: Change password after setup. 
+docker exec -it containerName /bin/bash 
